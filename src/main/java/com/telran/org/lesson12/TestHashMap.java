@@ -7,7 +7,7 @@ import java.util.Set;
 public class TestHashMap {
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>(); // key of the meaning
-        // hello -. 5
+        // hello -> 5
         // world -> 15
         // again -> 30
         // hi -> 10
