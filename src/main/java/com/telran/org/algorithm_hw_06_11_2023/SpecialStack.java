@@ -1,8 +1,6 @@
 package com.telran.org.algorithm_hw_06_11_2023;
 
-import java.util.Comparator;
 import java.util.Stack;
-import java.util.function.Function;
 
 // Java implementation of SpecialStack
 // Note : here we use Stack class for
@@ -21,13 +19,13 @@ auxiliary stack that holds minimum
 class SpecialStack extends Stack<Integer> {
     Stack<Integer> min = new Stack<>();
 
-    /* SpecialStack"s member method to
+    /* SpecialStack's member method to
 insert an element to it. This method
     makes sure that the min stack is
 also updated with appropriate minimum
     values */
     void push(int x) {
-        if (isEmpty() == true) {
+        if (isEmpty()) {
             super.push(x);
             min.push(x);
         } else {
@@ -41,7 +39,7 @@ also updated with appropriate minimum
         }
     }
 
-    /* SpecialStack"s member method to
+    /* SpecialStack's member method to
 insert an element to it. This method
     makes sure that the min stack is
 also updated with appropriate minimum
@@ -52,7 +50,7 @@ also updated with appropriate minimum
         return x;
     }
 
-    /* SpecialStack"s member method to get
+    /* SpecialStack's member method to get
 minimum element from it. */
     int getMin() {
         int x = min.pop();
