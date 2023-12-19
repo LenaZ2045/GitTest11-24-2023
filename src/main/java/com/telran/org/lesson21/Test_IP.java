@@ -3,7 +3,7 @@ package com.telran.org.lesson21;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TestIp {
+public class Test_IP {
 
     public static void main(String[] args) {
         //IP - A.B.C.D - 0 - 255
