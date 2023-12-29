@@ -28,9 +28,9 @@ public class TestPredicate {
         List<User> adminList = collect1(users, userAdminPredicate);
         System.out.println("Admin users" + adminList);
 
-        Predicate<User> memebrUsr = user -> "Member".equals(user.getRole());
-        List<User> mmerbList = collect1(users, memebrUsr);
-        System.out.println("Member user " + mmerbList);
+        Predicate<User> memberUsr = user -> "Member".equals(user.getRole());
+        List<User> memberList = collect1(users, memberUsr);
+        System.out.println("Member user " + memberList);
 
         Predicate<User> ageUser = user -> user.getAge() > 30;
         List<User> oldUsers = collect1(users, ageUser);
