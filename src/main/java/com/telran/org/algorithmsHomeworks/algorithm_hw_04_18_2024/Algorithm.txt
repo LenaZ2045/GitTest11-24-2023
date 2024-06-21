@@ -1,0 +1,66 @@
+Приведите несколько примеров применения хеш-функций в реальной жизни.
+
+применения хеш-функций в реальной жизни:
+
+Чек-суммы:
+Хеш-функции используются для проверки целостности файлов. При передаче больших файлов можно вычислить хеш-сумму на стороне отправителя и получателя, а затем сравнить их.
+Если хеши совпадают, файл не был поврежден.
+Например, при скачивании программного обновления или большого файла с Интернета.
+Хеш-таблицы:
+Хеш-функции используются для реализации хеш-таблиц, которые позволяют эффективно хранить и быстро искать данные.
+Пример: в языке программирования C++ класс unordered_set из библиотеки STL.
+Мемоизация:
+Хеш-функции помогают сохранять результаты вычислений для оптимизации повторных вызовов функций.
+Это особенно полезно при рекурсивных алгоритмах.
+Проверка на изоморфизм:
+Хеш-функции используются для сравнения структур данных (графов, деревьев) и определения, являются ли они изоморфными.
+Криптография:
+В криптографии хеш-функции применяются для создания цифровых подписей, хранения паролей, проверки целостности данных и других задач.
+
+Создайте публичный ключ RSA и скиньте его в открытом виде.
+
+The RSA key is a fundamental component of the RSA (Rivest–Shamir–Adleman) public-key crypto-system. Here are the key points about RSA:
+
+Definition:
+RSA is an asymmetric cryptographic algorithm used for secure data transmission.
+It protects sensitive information through encryption and decryption using a private key and a public key pair.
+How It Works:
+An RSA user generates a public key based on two large prime numbers (kept secret).
+The public key is used for encryption, allowing anyone to encrypt messages.
+The corresponding private key is kept secret and is used for decryption.
+Messages encrypted with the public key can only be decrypted by someone who knows the private key.
+Security Basis:
+RSA relies on the practical difficulty of factoring the product of two large prime numbers (the “factoring problem”).
+Breaking RSA encryption is known as the RSA problem.
+The security of RSA depends on the size of the key; larger keys are more secure.
+Applications:
+RSA is used for digital signatures, secure communication, and protecting sensitive data.
+It’s commonly used to transmit shared keys for symmetric-key cryptography (bulk encryption–decryption).
+Remember, RSA is relatively slow, so it’s not typically used to directly encrypt user data. Instead, it plays a crucial role in securing communication
+and establishing secure channels.
+
+Example 1: Key Pair Generation
+
+Suppose we choose two prime numbers: (p = 17) and (q = 11).
+Calculate:
+(n = p \cdot q = 17 \cdot 11 = 187)
+(\varphi(n) = (p-1) \cdot (q-1) = 16 \cdot 10 = 160)
+Choose (e = 7) (where (\gcd(160, 7) = 1))
+Compute (d = 23) (such that (7 \cdot 23 \mod 160 = 1))
+The keys are:
+Private key: ({d, n} = {35, 187})
+Public key: ({e, n} = {7, 187})
+Now, let’s encrypt a message (M = 99):
+(C = M^e \mod n = 99^7 \mod 187 = 176)
+To decrypt the message, use the private key:
+(M = C^d \mod n = 176^{35} \mod 187 = 99)
+
+Example 2: Public Key Distribution
+
+Suppose you have calculated your keys:
+Private key: ({23, 187})
+Public key: ({7, 187})
+You want to send a message (represented by the number 99):
+Encrypt: (C = M^e \mod n = 99^7 \mod 187 = 176)
+You can now send the encrypted message (C = 176) over an insecure network.
+Remember that RSA keys play a crucial role in secure communication and data protection!
